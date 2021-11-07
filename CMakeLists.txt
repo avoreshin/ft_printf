@@ -3,4 +3,4 @@ project(TEST C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(TEST main.c )
+add_executable(TEST main.c ft_printf.c)
