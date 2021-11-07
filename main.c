@@ -33,8 +33,8 @@ int main(void) {
 //	printf("ORIGINAL %p\n",b);
 //	ft_printf("NO ORIGINAL %p\n",b);
 
-	printf("%d %s %c %i %p %X %x %u\n", -12, "string", 'c', 23, b, 5546, 456456, -5);
-	ft_printf("%d %s %c %i %p %X %x %u\n", -12, "string", 'c', 23, b, 5546, 456456, -5);
+	printf("%s %c %p %X %x \n",  "string", 'c', b, 5546, 45345);
+	ft_printf("%s %c %p %X %x \n",  "string", 'c', b, 5546, 45345);
 
 	/* PRINT STRING*/
 //	printf("%s  %c %x %s %c %c%c %s %s %s \n","huawei", 'f', 253679,"aaaaa", 'f', 'f', 'f', "retert", "fertertb", "fertertertb");

@@ -16,11 +16,9 @@ stdarg.h
 ../libft/libft.h
 /Users/jlamonic/Documents/libft/libft.h
 
-/Users/jlamonic/Documents/TEST/main.c
+/Users/jlamonic/Documents/TEST/ft_printf.c
 ft_headers.h
 /Users/jlamonic/Documents/TEST/ft_headers.h
-string.h
--
 
 /Users/jlamonic/Documents/libft/libft.h
 unistd.h

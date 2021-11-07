@@ -19,12 +19,9 @@ int	ft_putstr(char *s)
 	return (count);
 }
 
-void	ft_putnbr(unsigned long n, char *base, int cap)
+void	ft_putnbr(unsigned long num, char *base, int cap)
 {
-	unsigned long	num;
-
-	num = n;
-	if (num >= cap)
+	if (num >= (unsigned  int)cap)
 	{
 		ft_putnbr(num / cap, base, cap);
 		ft_putnbr(num % cap, base, cap);
@@ -46,7 +43,7 @@ int ft_print (va_list ap, char *symbol, int i)
 	unsigned long long c;
 	char *str;
 	unsigned int h;
-	int d;
+//	int d;
 
 	if (symbol[i] == 'c')
 	{
@@ -74,16 +71,17 @@ int ft_print (va_list ap, char *symbol, int i)
 		h = va_arg(ap, unsigned long);
 		ft_putnbr((unsigned int)h, BASE16_HIGH, 16);
 	}
-	else if (symbol[i] == 'd' || symbol[i] == 'i')
-	{
-		d = va_arg(ap, int);
-		ft_putnbr((int)d,BASE10, 10);
-	}
-			else if (symbol[i] == 'u')
-			{
-				d = va_arg(ap, int);
-				ft_putnbr((unsigned long)d, BASE10, 10);
-			}
+	//TO_DO
+//	else if (symbol[i] == 'd' || symbol[i] == 'i')
+//	{
+//		d = va_arg(ap, int);
+//		ft_putnbr((int)d,BASE10, 10);
+//	}
+//			else if (symbol[i] == 'u')
+//			{
+//				d = va_arg(ap, int);
+//				ft_putnbr((unsigned long)d, BASE10, 10);
+//			}
 
 		return (0);
 }
