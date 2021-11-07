@@ -24,19 +24,22 @@ int main(void) {
 
 
 	/* PRINT POINTER */
-//	int	a;
-//	int *b;
+	int	a;
+	int *b;
 //
-//	a = -1;
-//	b = &a;
+	a = -1;
+	b = &a;
 //
 //	printf("ORIGINAL %p\n",b);
 //	ft_printf("NO ORIGINAL %p\n",b);
 
-	/* PRINT STRING*/
-	printf("%s  %c %x %s %c %c%c %s %s %s \n","huawei", 'f', 253679,"aaaaa", 'f', 'f', 'f', "retert", "fertertb", "fertertertb");
+	printf("%d %s %c %i %p %X %x %u\n", -12, "string", 'c', 23, b, 5546, 456456, -5);
+	ft_printf("%d %s %c %i %p %X %x %u\n", -12, "string", 'c', 23, b, 5546, 456456, -5);
 
-	ft_printf("%s  %c  %x %s %c %c%c %s %s %s \n","huawei", 'f',253679 ,"aaaaa", 'b', 'm', 'f', "retert", "fertertb", "fertertertb");
+	/* PRINT STRING*/
+//	printf("%s  %c %x %s %c %c%c %s %s %s \n","huawei", 'f', 253679,"aaaaa", 'f', 'f', 'f', "retert", "fertertb", "fertertertb");
+//
+//	ft_printf("%s  %c  %x %s %c %c%c %s %s %s \n","huawei", 'f',253679 ,"aaaaa", 'b', 'm', 'f', "retert", "fertertb", "fertertertb");
 
 /* PRINT CHAR*/
 //	printf("custom%%c%c%%%%c%ccccc%c\n",'d', 'f', 'g');

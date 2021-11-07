@@ -40,8 +40,8 @@ void	ft_putnbr(void *nn, void *base, unsigned long cap)
 
 int ft_check_flags(char q)
 {
-	if(q == 'c' || q == 's' || q == 'd' || q == 'i' ||q == 'p' || q == 'X' || \
-	q == 'x' || q == 'u')
+	if (q == 'c' || q == 's' || q == 'd' || q == 'i' ||q == 'p' || q == 'X' || \
+		q == 'x' || q == 'u')
 		return (1);
 	return(0);
 }
@@ -70,18 +70,16 @@ int ft_print (va_list ap, char *symbol, int i)
 	return (0);
 }
 
-int ft_printf(const char *s, ...)
+int ft_printf(const char *str, ...)
 {
 	va_list ap;
-	va_start(ap, s);
+	va_start(ap, str);
 	int	i;
-	char *str;
 
 	i = 0;
-	str = (char *)s;
 	while(str[i])
 	{
-		if (s[i] != '%')
+		if (str[i] != '%')
 			write(1,&str[i],1);
 		if (str[i] == '%')
 		{
