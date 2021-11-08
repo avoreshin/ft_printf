@@ -1,47 +1,29 @@
-NAME_PRINTF = libftprintf.a
+NAME = libftprintf.a
 
-#LIB_DIR =  ./libft/
-#LIB_NAME =	libft/libft.a
-#LIBFT = libft.a
+LIST =		ft_printf.c
 
-CC		= gcc
+OBJ = $(patsubst %.c, %.o,$(LIST))
 
-HEADER	= ./includes
+HEADER = ft_printf.h
 
-FLAGS	= -Wall -Wextra -Werror -g
+OPTFLAGS = -O2
 
-OBJS	= $(SRCS:.c=.o)
+FLAGS = -Wall -Wextra -Werror
 
-DIR		= ./SRC/
+all: $(NAME)
 
-SRCS = $(DIR)ft_printf.c
+$(NAME) : $(OBJ) $(HEADER)
+	ar rcs $(NAME) $?
 
-AR		= ar rc
+%.o : %.c
+	gcc $(FLAGS) $(OPTFLAGS) -c $< -o $@
 
-.c.o:
-	$(CC) $(FLAGS) -c  -I$(HEADER) $< -o $(<:.c=.o)
+clean :
+	@rm -f ${OBJ}
 
-all: $(LIBFT) $(NAME_PRINTF)
+fclean : clean
+	@rm -f $(NAME)
 
-bonus : $(LIBFT) $(NAME_PRINTF)
+re : fclean all
 
-$(LIBFT):
-		@echo "Compile libft.a"
-		@$(MAKE) -C $(LIB_DIR)
-		@echo "Compile OK"
-$(NAME_PRINTF): $(OBJS)
-		@cp libft/libft.a $(NAME_PRINTF)
-		@$(AR) $(NAME_PRINTF) $(OBJS)
-		ranlib $(NAME_PRINTF)
-clean:
-	make clean -C $(LIB_DIR)
-	rm $(OBJS)
-fclean: clean
-	make fclean -C $(LIB_DIR)
-	rm -rf $(NAME_PRINTF)
-
-re: fclean all
-
-
-
-.PHONY: all clean fclean re code bonus
+.PHONY : all clean fclean re

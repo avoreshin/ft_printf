@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_headers.h                                       :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlamonic <jlamonic@student.42.fr> >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 17:04:43 by jlamonic          #+#    #+#             */
-/*   Updated: 2021/11/07 20:30:35 by jlamonic         ###   ########.fr       */
+/*   Updated: 2021/11/08 00:35:12 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_HEADERS_H
-# define FT_HEADERS_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdio.h>
 # include <unistd.h>
 # include <stdarg.h>
-# include "../libft/libft.h"
+
 
 # define BASE16_LOW "0123456789abcdef"
 # define BASE16_HIGH "0123456789ABCDEF"
@@ -24,8 +24,7 @@
 
 typedef	struct		s_struct
 {
-	int				cnt;
-
+	int				count;
 }					t_struct;
 
 int ft_printf(const char *s, ...);

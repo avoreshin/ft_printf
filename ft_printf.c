@@ -1,4 +1,4 @@
-#include "ft_headers.h"
+#include "ft_printf.h"
 
 int	ft_putchar(void *c)
 {
@@ -96,5 +96,5 @@ int ft_printf(const char *str, ...)
 		i++;
 	}
 	va_end(ap);
-	return (0);
+	return (i);
 }
